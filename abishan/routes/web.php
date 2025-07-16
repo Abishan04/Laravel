@@ -2,21 +2,28 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 // Laravel
-Route::get('/', function () {
-      return view('employee.employeeform');
-  });  
+// Route::get('/', function () {
+//       return view('employee.employeeform');
+//   });
+Route::get('/', function (Request $request) {
+      return view('home.input');
+  });
+Route::get('output', function (Request $request) {
+      return view('home.recieve',$request->all());    
+     
+  });
 
 
-Route::post('employeedetail', function (Request $request) {
-    $data = [
-        'id' => $request->input('empid', 1),
-        'name' => $request->input('name', 'Abishan'),
-        'phone_no' => $request->input('tel', '0704567890'),
-        'nic' => $request->input('nic', '123456789V')
-    ];
+// Route::post('employeedetail', function (Request $request) {
+//     $data = [
+//         'id' => $request->input('empid', 1),
+//         'name' => $request->input('name', 'Abishan'),
+//         'phone_no' => $request->input('tel', '0704567890'),
+//         'nic' => $request->input('nic', '123456789V')
+//     ];
 
-    return view('employee.employeedetail', ['details' => $data]);
-});
+//     return view('employee.employeedetail', ['details' => $data]);
+// });
 // Route::post('employee-detail', function (Request $request) {
 //     $id = $request->input('empid',1);
 //     $name = $request->input('name', 'Abishan');
