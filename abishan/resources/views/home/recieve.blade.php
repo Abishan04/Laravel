@@ -5,18 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Input Types Demo</title>
+    <style>
+      form {
+          
+      }
+    </style>
     <link rel="stylesheet" href="{{ asset('css/input.css') }}" />
 </head>
 
 <body>
-    <form>
+    <form >
         <table>
             <tr>
                 <td><label for="button">button</label></td>
                 <td><input type="button" id="button" name="button" value="Click Me" /></td>
             </tr>
             <tr>
-                
+                <td><label for="grade">Grade</label></td>
+                <td>
+                    <select name="grade" id="grade" multiple size="4">
+                        <option value="A" {{ $grade=='A' ? 'selected' : '' }}>10A</option>
+                        <option value="B" {{ $grade=='B' ? 'selected' : '' }}>10B</option>
                         <option value="C" {{ $grade=='C' ? 'selected' : '' }}>10C</option>
                         <option value="D" {{ $grade=='D' ? 'selected' : '' }}>10D</option>
                     </select>
@@ -137,6 +146,10 @@
                 <td><label for="address">address</label></td>
                 <td><textarea name="address" id="add " cols="30" rows="5" >{{ $address }}</textarea>
                 </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="/">back</a>                </td>
             </tr>
         </table>
     </form>

@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <title>title</title>
-</head>
-<body>
-    <h1 style="text-align: center;">this is photo page</h1>
-</body>
-</html>
+@extends('layout.master')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>welcome to Photo</h1>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('title','Photo')

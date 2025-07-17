@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <title>title</title>
-</head>
-<body  bgcolor={{$color}}>
-    <h1>this is about page</h1>
-     
-</body>
-</html>
+@extends('layout.master')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Welcome to About</h1>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('title','About')
+

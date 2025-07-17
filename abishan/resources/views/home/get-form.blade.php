@@ -1,46 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Home</title>
+@extends('layout.master')
 
-    <!-- ✅ Bootstrap 5 CSS -->
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <head>
+    <meta charset="UTF-8" />
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- ✅ Bootstrap Icons (optional) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link href="{{ asset('css/input.css') }}" rel="stylesheet">
 
-    <!-- 🎨 Custom Dark Theme CSS -->
-    <style>
-        body {
-            background-color: #121212;
-            color: #f1f1f1;
-        }
-
-        h1, .card-title {
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .card {
-            background-color: #1f1f1f;
-            border-radius: 10px;
-            border: none;
-        }
-
-        .btn {
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        .btn:hover {
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
-        }
-
-        .container {
-            max-width: 600px;
-        }
-    </style>
 </head>
 
 <body class="py-5">
@@ -88,4 +60,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+            </div>
+        </div>
+    </div>
+@endsection

@@ -163,43 +163,32 @@
                 @php
                     use Carbon\Carbon;
 
-                    $nic = strtoupper(trim( $details['nic'] ));
-                    $dob = null;
-                    $age = null;
-                    $gender = null;
+    $nic = strtoupper(trim($details['nic']));
+$dob = $age = $gender = null;
 
-                    if (Str::length( $details['nic'] ) === 10 && (Str::endsWith($nic, 'V') || Str::endsWith( $details['nic'] , 'X'))) {
-                        $year = 1900 + intval(Str::substr($details['nic'], 0, 2));
-                        $day = intval(Str::substr($details['nic'] , 2, 3));
-                    } elseif (Str::length( $details['nic'] ) === 12 && ctype_digit( $details['nic'] )) {
-                        $year = intval(Str::substr($details['nic'], 0, 4));
-                        $day = intval(Str::substr($details['nic'], 4, 3));
-                    }
+if (Str::length($nic) === 10 && Str::endsWith($nic, ['V', 'X'])) {
+    $year = 1900 + intval(Str::substr($nic, 0, 2));
+    $day = intval(Str::substr($nic, 2, 3));
+} elseif (Str::length($nic) === 12 && ctype_digit($nic)) {
+    $year = intval(Str::substr($nic, 0, 4));
+    $day = intval(Str::substr($nic, 4, 3));
+}
 
-                    if ($year && $day) {
-                        $gender = $day > 500 ? 'Female' : 'Male';
-                        if ($day > 500) {
-                            $day -= 500;
-                        }
+if (isset($year, $day)) {
+    $gender = $day > 500 ? 'Female' : 'Male';
+    $day = $day > 500 ? $day - 500 : $day;
 
-                        try {
-                            $isLeap = Carbon::createFromDate($year)->isLeapYear();
+    $isLeap = Carbon::createFromDate($year)->isLeapYear();
+    $adjustedDay = !$isLeap ? $day - 1 : $day;
 
-                            if ($day >= 1 && $day <= ($isLeap ? 366 : 365)) {
-                                $dobObj = Carbon::createFromDate($year, 1, 1)->addDays($day - 1);
-                                $dob = $dobObj->format('Y-m-d');
-                                $age = $dobObj->age;
-                            } else {
-                                $dob = null;
-                                $age = null;
-                                $gender = null;
-                            }
-                        } catch (Exception $e) {
-                            $dob = null;
-                            $age = null;
-                            $gender = null;
-                        }
-                    }
+    if ($adjustedDay >= 1 && $adjustedDay <= ($isLeap ? 366 : 365)) {
+        $dobObj = Carbon::createFromDate($year, 1, 1)->addDays($adjustedDay - 1);
+        $dob = $dobObj->format('Y-m-d');
+        $age = $dobObj->age;
+    } else {
+        $dob = $age = $gender = null;
+    }
+}
                 @endphp
                        <tr><th>NIC</th><td>{{ $details['nic'] }}</td></tr>
                         <tr><th>Date of Birth</th><td>{{ $dob ?? 'Unavailable' }}</td></tr>

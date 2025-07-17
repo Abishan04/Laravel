@@ -2,16 +2,20 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 // Laravel
+Route::view('/','home');
+
+
 // Route::get('/', function () {
 //       return view('employee.employeeform');
 //   });
-Route::get('/', function (Request $request) {
-      return view('home.input');
-  });
-Route::get('output', function (Request $request) {
-      return view('home.recieve',$request->all());    
+// Route::get('/', function (Request $request) {
+//       return view('home.input');
+//   });
+
+// Route::get('output', function (Request $request) {
+//       return view('home.recieve',$request->all());    
      
-  });
+//   });
 
 
 // Route::post('employeedetail', function (Request $request) {
@@ -23,7 +27,7 @@ Route::get('output', function (Request $request) {
 //     ];
 
 //     return view('employee.employeedetail', ['details' => $data]);
-// });
+//  });
 // Route::post('employee-detail', function (Request $request) {
 //     $id = $request->input('empid',1);
 //     $name = $request->input('name', 'Abishan');
@@ -101,9 +105,11 @@ Route::get('output', function (Request $request) {
 // Route::get('photo', function () {
 //     return view('pages.photo');
 // });
-// Route::view('/', 'welcome');
-// Route::view('home', 'home');
-// Route::view('about', 'pages.about');
-// Route::view('contact', 'pages.contact');
-// Route::view('photo', 'pages.photo');
+//Route::view('/', 'welcome');
+Route::view('home', 'home');
+Route::view('about', 'pages.about');
+Route::view('contact', 'pages.contact');
+Route::view('photo', 'pages.photo');
+Route::view('input', 'home.get-form');
+Route::view('emplist', 'employee.employeelist');
 ?> 

@@ -49,7 +49,7 @@
             </tr>
             <tr>
                 <td><label for="datetime-local">datetime-local</label></td>
-                <td><input type="datetime-local" id="datetimelocal" name="datetimelocal" /></td>
+                <td><input type="datetime-local" id="datetimelocal" name="datetimelocal"/></td>
             </tr>
             <tr>
                 <td><label for="email">email</label></td>
