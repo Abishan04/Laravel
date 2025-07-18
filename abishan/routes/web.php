@@ -2,7 +2,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 // Laravel
-Route::view('/','home');
+
+Route::get('/', function () {
+       return 'welcome';
+   });
 
 
 // Route::get('/', function () {
@@ -18,16 +21,16 @@ Route::view('/','home');
 //   });
 
 
-// Route::post('employeedetail', function (Request $request) {
-//     $data = [
-//         'id' => $request->input('empid', 1),
-//         'name' => $request->input('name', 'Abishan'),
-//         'phone_no' => $request->input('tel', '0704567890'),
-//         'nic' => $request->input('nic', '123456789V')
-//     ];
+Route::post('employeedetail', function (Request $request) {
+    $data = [
+        'id' => $request->input('empid', 1),
+        'name' => $request->input('name', 'Abishan'),
+        'phone_no' => $request->input('tel', '0704567890'),
+        'nic' => $request->input('nic', '123456789V')
+    ];
 
-//     return view('employee.employeedetail', ['details' => $data]);
-//  });
+    return view('employee.employeedetail', ['details' => $data]);
+  });
 // Route::post('employee-detail', function (Request $request) {
 //     $id = $request->input('empid',1);
 //     $name = $request->input('name', 'Abishan');
@@ -112,4 +115,6 @@ Route::view('contact', 'pages.contact');
 Route::view('photo', 'pages.photo');
 Route::view('input', 'home.get-form');
 Route::view('emplist', 'employee.employeelist');
-?> 
+Route::view('form', 'employee.employeeform');
+Route::view('main', 'layout.main');
+Route::view('form', 'employee.employeeform');

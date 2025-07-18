@@ -1,7 +1,6 @@
-@extends('layout.master')
-@section('title')
-  Employee List
-@endsection
+@extends('layout.main')
+@section('title','Employee List')
+
 @section('content')
 <div class="container py-5">
     <div class="table-responsive">

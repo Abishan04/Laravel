@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.main')
 
 @section('sidebar')
 @parent
