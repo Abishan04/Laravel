@@ -1,4 +1,6 @@
-@extends('layout.main')
+@extends('layout.dashboard')
+
+@section('photo', 'active')
 
 @section('content')
     <div class="container">

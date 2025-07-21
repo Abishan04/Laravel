@@ -3,9 +3,13 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 // Laravel
 
+
 Route::get('/', function () {
-       return 'welcome';
-   });
+    return view('layout.dashboard');
+});
+Route::get('emp', function () {
+    return view('employee.employeelist');
+});
 
 
 // Route::get('/', function () {
@@ -109,6 +113,7 @@ Route::post('employeedetail', function (Request $request) {
 //     return view('pages.photo');
 // });
 //Route::view('/', 'welcome');
+// Route::view('/', 'home');
 Route::view('home', 'home');
 Route::view('about', 'pages.about');
 Route::view('contact', 'pages.contact');

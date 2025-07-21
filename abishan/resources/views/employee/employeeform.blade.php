@@ -1,13 +1,18 @@
-@extends('layout.main')
+@extends('layout.dashboard')
+
+@section('eform', 'active')
 
 @section('title', 'Employee Form')
 
-@section('content')
+@section('style')
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@endsection
+
+@section('content')
 
 <form action="/employeedetail" method="POST">
     @csrf
-    <fieldset>
+    <fieldset> 
         <legend>Employee Form</legend>
 
         <label for="empid">Employee ID</label>

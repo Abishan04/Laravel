@@ -2,12 +2,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #2d3a5a, #3c4e6d);
-  color: #fff;
+
   box-sizing: border-box;
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -15,13 +12,19 @@ body {
 
 form {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: auto;
   background: #3c4e6d;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  padding: 24px;
+  padding: 12px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  box-sizing: border-box;
 }
 
 fieldset {

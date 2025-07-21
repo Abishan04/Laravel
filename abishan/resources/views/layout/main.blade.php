@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title> @yield('title')</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    @vite(['resources/scss/style.scss', 'resources/js/app.js'])
+    @yield('style')
   <style>
     html, body {
       height: 100%;
@@ -39,9 +40,10 @@
       </nav>
       </aside>
 
-      <section class="col-md-9 bg-light text-dark text-center py-4 full-height">
-      @yield('content')
-      </section>
+     <section class="col-md-9 bg-light text-dark d-flex justify-content-center align-items-center full-height">
+  @yield('content')
+</section>
+      
     </div>
   </main>
 

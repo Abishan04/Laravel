@@ -1,4 +1,7 @@
-@extends('layout.main')
+@extends('layout.dashboard')
+
+@section('elist', 'active')
+
 @section('title','Employee List')
 
 @section('content')
@@ -35,7 +38,7 @@
                     <td>24</td>
                     <td>Male</td>
                     <td>0774567890</td>
-                    <td>200115700569</td>
+                    <td>200115600569</td>
                     <td><a href="/employeedetail/2/Mathivarman/0774567890/200115700569" class="btn btn-sm btn-primary">Show</a></td>
                 </tr>
                 <tr>

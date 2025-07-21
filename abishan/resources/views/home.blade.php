@@ -1,4 +1,6 @@
-@extends('layout.main')
+@extends('layout.dashboard')
+
+@section('home', 'active')
 
 @section('sidebar')
 @parent
