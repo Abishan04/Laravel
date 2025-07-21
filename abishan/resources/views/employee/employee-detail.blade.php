@@ -123,8 +123,8 @@
             <section>
                 <div class="details-container">
                     <table class="details-table">
-                        <tr><th>ID</th><td>{{ $id}}</td></tr>
-                        <tr><th>Name</th><td>{{ $name }}</td></tr>
+                        <tr><th>ID</th><td>{{$details['id']}}</td></tr>
+                        <tr><th>Name</th><td>{{ $details['name'] }}</td></tr>
                        
                             @php
                                 

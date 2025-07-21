@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layout.dashboard')
 
 @section('title', $details['name'] . "'s Details")
 
@@ -8,7 +8,7 @@
 
 @section('content')
 
-<div class="wrapper w-100 h-100">
+<div class="wrapper w-100 h-100 ">
         <section class="flex-grow-1 p-4 bg-light text-dark">
             <div class="details-container">
                 <table class="details-table table table-bordered">
@@ -80,7 +80,7 @@
             </div>
         </section>
     </main>
-
-    <footer class="text-center mt-4">&copy; 2025 Employee System. All rights reserved.</footer>
+{{-- 
+    <footer class="text-center mt-4">&copy; 2025 Employee System. All rights reserved.</footer> --}}
 </div>
 @endsection

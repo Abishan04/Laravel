@@ -29,7 +29,7 @@
                     <td>Male</td>
                     <td>0704567890</td>
                     <td>200518600093</td>
-                    <td><a href="/employeedetail/1/Abishan/0704567890/200518600093" class="btn btn-sm btn-primary">Show</a></td>
+                    <td><a href="/employee-detail/1/Abishan/0704567890/200518600093" class="btn btn-sm btn-primary">Show</a></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -39,7 +39,7 @@
                     <td>Male</td>
                     <td>0774567890</td>
                     <td>200115600569</td>
-                    <td><a href="/employeedetail/2/Mathivarman/0774567890/200115700569" class="btn btn-sm btn-primary">Show</a></td>
+                    <td><a href="/employee-detail/2/Mathivarman/0774567890/200115700569" class="btn btn-sm btn-primary">Show</a></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -49,7 +49,7 @@
                     <td>Male</td>
                     <td>0784567890</td>
                     <td>200003301029</td>
-                    <td><a href="/employeedetail/3/Jananthan/0784567890/200003301029" class="btn btn-sm btn-primary">Show</a></td>
+                    <td><a href="/employee-detail/3/Jananthan/0784567890/200003301029" class="btn btn-sm btn-primary">Show</a></td>
                 </tr>
                 <tr>
                     <td>4</td>
@@ -59,7 +59,7 @@
                     <td>Male</td>
                     <td>0754567890</td>
                     <td>200436200300</td>
-                    <td><a href="/employeedetail/4/Habinan/0754567890/200436200300" class="btn btn-sm btn-primary">Show</a></td>
+                    <td><a href="/employee-detail/4/Habinan/0754567890/200436200300" class="btn btn-sm btn-primary">Show</a></td>
                 </tr>
             </tbody>
         </table>
