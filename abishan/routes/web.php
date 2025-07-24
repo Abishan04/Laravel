@@ -2,14 +2,20 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 // Laravel
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\EmployeeController;
 
+Route::resource('students', StudentController::class);
+Route::resource('employees', EmployeeController::class);
+
+//Route::view('/', 'student.create');
 
 Route::get('/', function () {
     return view('layout.dashboard');
 });
-Route::get('emp', function () {
-    return view('employee.employeelist');
-});
+// Route::get('emp', function () {
+//     return view('employee.employeelist');
+// });
 
 
 // Route::get('/', function () {
@@ -25,16 +31,16 @@ Route::get('emp', function () {
 //   });
 
 
-Route::post('employeedetail', function (Request $request) {
-    $data = [
-        'id' => $request->input('empid', 1),
-        'name' => $request->input('name', 'Abishan'),
-        'phone_no' => $request->input('tel', '0704567890'),
-        'nic' => $request->input('nic', '123456789V')
-    ];
+// Route::post('employeedetail', function (Request $request) {
+//     $data = [
+//         'id' => $request->input('empid', 1),
+//         'name' => $request->input('name', 'Abishan'),
+//         'phone_no' => $request->input('tel', '0704567890'),
+//         'nic' => $request->input('nic', '123456789V')
+//     ];
 
-    return view('employee.employeedetail', ['details' => $data]);
-  });
+//     return view('employee.employeedetail', ['details' => $data]);
+//   });
 // Route::post('employee-detail', function (Request $request) {
 //     $id = $request->input('empid',1);
 //     $name = $request->input('name', 'Abishan');
@@ -114,12 +120,13 @@ Route::post('employeedetail', function (Request $request) {
 // });
 //Route::view('/', 'welcome');
 // Route::view('/', 'home');
-Route::view('home', 'home');
-Route::view('about', 'pages.about');
-Route::view('contact', 'pages.contact');
-Route::view('photo', 'pages.photo');
-Route::view('input', 'home.get-form');
-Route::view('emplist', 'employee.employeelist');
-Route::view('form', 'employee.employeeform');
-Route::view('main', 'layout.main');
-Route::view('form', 'employee.employeeform');
+// Route::view('home', 'home');
+// Route::view('about', 'pages.about');
+// Route::view('contact', 'pages.contact');
+// Route::view('photo', 'pages.photo');
+// Route::view('input', 'home.get-form');
+// Route::view('emplist', 'employee.employeelist');
+// Route::view('form', 'employee.employeeform');
+// Route::view('main', 'layout.main');
+// Route::view('form', 'employee.employeeform');
+Route::view('/create', 'employee.sample');

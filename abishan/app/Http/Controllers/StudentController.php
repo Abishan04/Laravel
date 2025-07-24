@@ -11,7 +11,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return view('student.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('student.create');
     }
 
     /**
@@ -27,7 +27,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return dd($request->all());
     }
 
     /**
@@ -35,7 +35,7 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('student.show');
     }
 
     /**
@@ -43,7 +43,7 @@ class StudentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('student.edit');
     }
 
     /**
@@ -51,7 +51,7 @@ class StudentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return dd($request->all());
     }
 
     /**
@@ -59,6 +59,6 @@ class StudentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return dd($id);
     }
 }
